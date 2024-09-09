@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: "Merienda", cursive;
+  background-image: url('/images/sunrise.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+}
+.app-container {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(235, 182, 232);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(218, 34, 34, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px; 
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.add-activity {
+  width: 100%;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width:auto;
+  padding:10px 20px 10px 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color:purple;
+  outline: none; 
+}
+button.add {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #cc5dee; 
+  color: white;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+button.add:hover {
+  background-color: #68f745;
+}
+.todo-list {
+  padding: 0;
+  width: 100%;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid grey;
+  transition: background-color 0.3s, transform 0.3s; 
+}
+.todo-item:hover {
+  background-color: #f1bbbb; 
+  transform: scale(1.02); 
+}
+.todo-item span {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #34495e; 
+}
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: #888; 
+}
+.todo-item input[type="checkbox"] {
+  margin-right: 15px;
+  transition: transform 0.2s; 
+}
+.todo-item input[type="checkbox"]:checked {
+  transform: scale(1.2); 
+}
+.todo-item button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.todo-item button:hover {
+  background-color: rgba(10, 228, 236, 0.89); 
+  transform: scale(1.1); 
+}
+
+.todo-item button.edit {
+  background-color: #d6f54c; 
+  color: rgb(21, 90, 4);
+}
+
+.todo-item button.edit:hover {
+  background-color: #10e456;
+}
+
+.todo-item button.delete {
+  background-color: #e74c3c; 
+  color: white;
+}
+
+.todo-item button.delete:hover {
+  background-color: #f1230c;
+}
+button.remove-all {
+  background-color: #e74c3c; 
+  color: white;
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+button.remove-all:hover {
+  background-color: #f1230c;
+}
